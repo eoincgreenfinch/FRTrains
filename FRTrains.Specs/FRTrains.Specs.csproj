@@ -53,15 +53,27 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Features\RouteDistance.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RouteDistance.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\RouteDistance.steps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Features\RouteDistance.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>RouteDistance.feature.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Features\" />
-    <Folder Include="Steps\" />
+    <ProjectReference Include="..\FRTrains.Models\FRTrains.Models.csproj">
+      <Project>{23b8285d-0d5f-4a10-9c25-0ad84d6a526a}</Project>
+      <Name>FRTrains.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

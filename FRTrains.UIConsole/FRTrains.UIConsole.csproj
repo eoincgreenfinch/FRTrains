@@ -47,6 +47,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FRTrains.BLL\FRTrains.BLL.csproj">
+      <Project>{6c6991d5-3220-4cc3-a242-6b4f8e56ffa2}</Project>
+      <Name>FRTrains.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FRTrains.Models\FRTrains.Models.csproj">
+      <Project>{23b8285d-0d5f-4a10-9c25-0ad84d6a526a}</Project>
+      <Name>FRTrains.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
